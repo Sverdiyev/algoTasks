@@ -21,8 +21,10 @@ export function balancedBrackets(input) {
   for (let el of inputArray) {
     if (brackets[el]) closingStack.unshift(el);
     else {
-      const poppedElement = closingStack.pop();
-      if (poppedElement !== el) return false;
+      const poppedElement = closingStack.shift();
+      if (brackets[poppedElement] !== el) return false;
     }
   }
+  if (closingStack.length === 0) return true;
+  return false;
 }
