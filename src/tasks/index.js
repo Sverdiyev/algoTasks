@@ -15,7 +15,7 @@ const wordSearch = new WordSearch([
   'abcdefghij',
   'saggsasagg',
   'qwopjrpqis',
-  'mfaslkfmsa',
+  'mfasashakfmsa',
   'msflksmafl',
   'oqjrwqiwra',
   'ijqwrjifmm',
@@ -25,4 +25,4 @@ const wordSearch = new WordSearch([
 ]);
 console.log(wordSearch.letterGrid);
 
-console.log(wordSearch.find(['java']));
+console.log(wordSearch.find(['java', 'sasha']));

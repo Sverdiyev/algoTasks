@@ -9,15 +9,17 @@ export default class WordSearch {
   }
 
   find(words) {
+    let finalResult = {};
     //horizontal search
     for (let i = 0; i < words.length; i++) {
       for (let j = 0; j < this.letterGrid.length; j++) {
         const row = this.letterGrid[j];
         let result = findWordHorizontal(words[i], row, j);
-        if (!(result !== -1)) return result;
+        if (result !== -1) finalResult[words[i]] = result;
       }
     }
     //vertical search
+
     // const rows = [];
     // for (let i = 0; i < this.letterGrid.length; i++) {
     //   for (let j = 0; j < this.letterGrid[i].length; j++) {
@@ -26,6 +28,8 @@ export default class WordSearch {
     // }
     // console.log('rows');
     // console.log(rows);
+
+    return finalResult;
   }
 }
 
@@ -34,8 +38,9 @@ const findWordHorizontal = (word, row, rowIndex) => {
   if (startCoordinate === -1) {
     startCoordinate = row.split('').reverse().join('').indexOf(word);
   }
-  let result = -1;
-  if (startCoordinate !== -1) result = [rowIndex + 1, startCoordinate + 1];
+
+  let result =
+    startCoordinate === -1 ? -1 : [rowIndex + 1, startCoordinate + 1];
   return result;
 };
 
