@@ -1,4 +1,6 @@
-import { balancedBrackets } from './balancedBrackets.js';
+// import { balancedBrackets } from './balancedBrackets.js';
+
+import WordSearch from './wordSearch.js';
 
 // import { longestPrefix } from './longestPrefix.js';
 
@@ -8,4 +10,19 @@ import { balancedBrackets } from './balancedBrackets.js';
 
 // console.log(longestPrefix(['c', 'acc', 'ccc']));
 
-console.log(balancedBrackets('(('));
+// console.log(balancedBrackets('(('));
+const wordSearch = new WordSearch([
+  'abcdefghij',
+  'saggsasagg',
+  'qwopjrpqis',
+  'mfaslkfmsa',
+  'msflksmafl',
+  'oqjrwqiwra',
+  'ijqwrjifmm',
+  'mafslkfasm',
+  'koqwopwqrk',
+  'kvjavabjch', // java
+]);
+console.log(wordSearch.letterGrid);
+
+console.log(wordSearch.find(['java']));
