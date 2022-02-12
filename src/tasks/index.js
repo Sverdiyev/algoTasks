@@ -12,17 +12,17 @@ import WordSearch from './wordSearch.js';
 
 // console.log(balancedBrackets('(('));
 const wordSearch = new WordSearch([
-  'abcdefghij',
-  'saggsasagg',
-  'qwopjrpqis',
-  'mfasashakfmsa',
-  'msflksmafl',
+  '123456789s',
+  'saggsasaga',
+  '123456789n',
+  'mfasashake',
+  '123456789k',
   'oqjrwqiwra',
-  'ijqwrjifmm',
+  '1234567890',
   'mafslkfasm',
-  'koqwopwqrk',
+  '1234567890',
   'kvjavabjch', // java
 ]);
 console.log(wordSearch.letterGrid);
 
-console.log(wordSearch.find(['java', 'sasha']));
+console.log(wordSearch.find(['java', 'sasha', 'sanek']));
