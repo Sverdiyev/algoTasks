@@ -18,7 +18,7 @@ export function balancedBrackets(input) {
 
   if (inputArray.length % 2) return false;
 
-  for (let el of inputArray) {
+  for (const el of inputArray) {
     if (brackets[el]) closingStack.unshift(el);
     else {
       const poppedElement = closingStack.shift();
